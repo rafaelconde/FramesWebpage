@@ -42,7 +42,7 @@ body {
   width: 295px;
   max-width: 61.8%;
   height: 100%;
-  background: url("/assets/iphone-background.png");
+  background: url("../assets/iphone-background.png");
   background-size: 100% 100%; }
   @media (max-width: 905px) {
     .left-column {
@@ -94,7 +94,7 @@ body {
     width: 100%;
     height: 203px;
     background-color: black;
-    background: url("/assets/video-thumbnail.png");
+    background: url("../assets/video-thumbnail.png");
     background-size: cover;
     border-radius: 6px;
     margin: 30px 0 30px 0;
@@ -155,8 +155,8 @@ body {
     margin-top: 0;
     margin-bottom: 5px; }
   .credits h5 {
-    font-family: AvenirNextLTW01-Regular; }
+    font-family: 'AvenirNextLTW01-Regular'; }
   .credits h6 {
-    font-family: Avenir LT W01_85 Heavy1475544; }
+    font-family: 'Avenir LT W01_85 Heavy1475544'; }
   .credits a {
     text-decoration: none; }
