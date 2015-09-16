@@ -1,3 +1,6 @@
+// font-family:'AvenirNextLTW01-Regular';
+// font-family:'AvenirNextLTW01-Medium';
+
 @mixin vertical-align {
   position: relative;
   top: 50%;
@@ -6,216 +9,157 @@
   transform: translateY(-50%);
 }
 
-$black: #1F1F20;
+$blue: #3BBFF8;
 
-// h1,
-// h2,
-// h3 { font-family: 'futura-pt'; }
-// p,
-// li { font-family: 'ff-tisa-web-pro';}
+h1 {font-family:'AvenirNextLTW01-Regular';}
+h2 {
+  font-family:'AvenirNextLTW01-Medium';
+  font-size: 18px;
+  color: #FFFFFF;
+  line-height: 25px;
+  letter-spacing: -0.8px;
+  margin-top: 5px;
+  text-align: left;
+}
+a {color: inherit;}
+p {
+  font-family:'AvenirNextLTW01-Regular';
+  font-size: 14px;
+}
 
-// h1 {
-//   font-size: 50px;
-//   font-weight: 700;
-//   @media (max-width: 550px){
-//     font-size: 40px;
-//   }
-// }
+body {
+  position: relative;
+  overflow-y: scroll;
+  background: $blue;
+  height: 100vh;
+  color: #fff;
+}
 
-// p { font-weight: 400;}
+.content {
+  @media (min-height: 600px){
+    @include vertical-align;
+  }
+  height: 600px;
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+}
 
-// ul {
-//   list-style: none;
-//   padding-left: 0;
-//   margin: 0;
-//   li {
-//     margin-bottom: 8px;
-//     @media (max-width: 1025px){
-//       margin-bottom: 25px;
-//     }
-//   }
-// }
+.left-column {
+  float: left;
+  width: 295px;
+  max-width: 61.8%;
+  height: 100%;
+  background: url("/assets/iphone-background.png");
+  background-size: 100% 100%;
 
-// a {
-//   text-decoration: none;
-//   color: inherit;
-//   &:hover,
-//   &:focus { text-decoration: underline; }
-// }
+  @media (max-width: 905px){
+    display: none;
+  }
 
-// #title {
-//   font-size: 68px;
-//   text-transform: uppercase;
-//   margin-top: -10px;
-//   margin-bottom: -10px;
-//   @media (max-width: 550px){
-//     font-size: 45px;
-//   }
-//   @media (max-width: 346px){
-//     font-size: 10vw;
-//     margin-top: 0px;
-//     margin-bottom: 0px;
-//   }
-// }
+  .video-container {
+    position: absolute;
+    width: 256px;
+    height: 454px;
+    top: 72px;
+    left: 20px;
+    background: black;
+    video {width: 100%; height: 100%;}
+  }
+}
 
-// .publication {
-//   font-size: 16px;
-//   text-transform: uppercase;
-// }
+.right-column {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 415px;
+  margin-left: 90px;
+  .wrapper {
+    @media (min-height: 600px){
+      @include vertical-align;
+    }
+    @media (max-height: 599px){
+      margin-top: 80px;
+    }
+    max-width: 450px;
+    margin: auto;
+  }
+  .logo {
+    height: 37px;
+    @media (max-width: 400px) {
+      height: auto;
+      width: 100%;
+    }
+  }
+  h2 {
+    @media (max-width: 445px){font-size: 15px;}
+    @media (max-width: 905px){text-align: center;}
+  }
+  .promo-video {
+    display: block;
+    width: 100%;
+    height: 203px;
+    background-color: black;
+    background: url('/assets/video-thumbnail.png');
+    background-size: cover;
+    border-radius: 6px;
+    margin: 30px 0 30px 0;
+    transform: scale(1, 1);
+    transition: transform 0.3s ease;
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      transform: scale(0.95, 0.95);
+    }
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .download-btn {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-family:'AvenirNextLTW01-Medium';
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    transform: scale(1, 1);
+    transition: transform 0.3s ease;
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      transform: scale(0.95, 0.95);
+    }
+  }
+  @media (max-width: 905px){
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+}
+#breakpoint {
+  display: none;
+  @media (max-width: 374px){
+    display: inline;
+  }
+}
 
-// .lowercase { text-transform:lowercase; }
-// .smallcaps {
-//   text-transform: small-caps;
-//   text-transform: uppercase;
-//   font-size: 12px;
-//   opacity: 0.8;
-//   padding-left: 5px;
-// }
-
-// .hide-on-mobile {
-//   @media (max-width: 1025px){
-//     display: none;
-//   }
-// }
-
-// .hide-on-desktop {
-//   @media (min-width: 1025px){
-//     display: none;
-//   }
-// }
-
-// ////////////////////////////////////
-
-// .header.row {
-//   height: 90vh;
-//   width: 100%;
-//   max-height: 625px;
-//   max-width: 100%;
-//   margin: 0;
-//   padding: 0;
-//   border-bottom: 1px solid rgba(255,255,255,0.1);
-// }
-// .large-7 {width: 61.8% !important;} // Golden Ratio
-// .large-5 {width: 38.2% !important;} // Golden Ratio
-
-// .my-name-is-earl {
-//   height: 100%;
-//   padding: 20px;
-//   background: $black;
-//   text-align: center;
-//   color: #fff;
-//   p {margin: 0;}
-//   .wrapper {@include vertical-align;}
-// }
-
-// .video-wrapper {
-//   width: 50%;
-//   height: 100%;
-//   padding-left: 0 !important;
-//   padding-right: 0 !important;
-//   z-index: -1;
-
-//   background: $black;
-// }
-
-// video#background-video {
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// }
-
-// .separator {
-//   width: 80%;
-//   margin: auto;
-//   text-align: center;
-// }
-
-// .work.row {
-//   position: relative;
-//   height: 100vh;
-//   width: 100%;
-//   max-height: 480px;
-//   max-width: 100%;
-//   margin: 0;
-//   padding: 0;
-
-//   background: $black;
-//   color: #fff;
-//   border-bottom: 1px solid rgba(255,255,255,0.1);
-
-//   .description,
-//   .icon { height: 100%; }
-//   .description .wrapper {
-//     @include vertical-align;
-//     max-width: 500px;
-//     width: 90%;
-//     margin: auto;
-//     padding-left: 20px;
-//     @media (max-width: 550px){
-//       max-width: 90%;
-//       padding: 0;
-//     }
-//     h1 { text-transform: uppercase; }
-//     h1,
-//     p { margin: 0; }
-//   }
-// }
-
-// .icon .wrapper {
-//   @include vertical-align;
-//   max-width: 180px;
-//   width: 90%;
-//   margin: auto;
-//   opacity: 0.7;
-// }
-
-// .artboard .icon .wrapper { max-width: 130px; }
-
-// .other-thangs { margin-top: 100px; }
-
-// .other-thangs .row {
-//   position: relative;
-//   width: 100%;
-//   max-width: 100%;
-//   margin: 0;
-//   padding: 0;
-//   margin-bottom: 50px;
-
-//   .wrapper {
-//     max-width: 500px;
-//     width: 90%;
-//     margin: auto;
-//     padding-left: 20px;
-//     h1,
-//     p { margin: 0; }
-//   }
-// }
-
-// .meet {
-//   h1 {font-size: 48px;}
-//   h2 {font-size: 20px; margin-top: 0; margin-bottom: 30px;}
-//   ul {columns: 2;}
-//   .strike {text-decoration: line-through;}
-// }
-
-// .footer-ish {
-//   position: relative;
-//   width: 100%;
-//   max-width: 100%;
-//   margin: 0;
-//   padding: 0;
-
-//   .row {
-//     max-width: 100%;
-//     margin: 0;
-//     padding: 0;
-//   }
-
-//   .wrapper {
-//     max-width: 500px;
-//     width: 90%;
-//     margin: auto;
-//     padding-left: 20px;
-//     text-align: center;
-//   }
-// }
+.credits {
+  position: absolute;
+  width: 100%;
+  bottom: -100px;
+  padding-bottom: 20px;
+  h5,h6 {
+    font-size: 12px;
+    letter-spacing: -0.8px;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  h5 {font-family: AvenirNextLTW01-Regular;}
+  h6 {font-family: Avenir LT W01_85 Heavy1475544;}
+  a {text-decoration: none;}
+  text-align: center;
+}
