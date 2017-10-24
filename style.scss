@@ -9,25 +9,30 @@
   transform: translateY(-50%);
 }
 
-$blue: #3BBFF8;
+$blue: #3bbff8;
 
-h1 {font-family:'AvenirNextLTW01-Regular';}
+h1 {
+  font-weight: 500;
+}
 h2 {
-  font-family:'AvenirNextLTW01-Medium';
   font-size: 18px;
-  color: #FFFFFF;
+  font-weight: 500;
+  color: #ffffff;
   line-height: 25px;
   letter-spacing: -0.8px;
   margin-top: 5px;
   text-align: left;
 }
-a {color: inherit;}
+a {
+  color: inherit;
+}
 p {
-  font-family:'AvenirNextLTW01-Regular';
   font-size: 14px;
 }
 
 body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   position: relative;
   overflow-y: scroll;
   background: $blue;
@@ -36,7 +41,7 @@ body {
 }
 
 .content {
-  @media (min-height: 600px){
+  @media (min-height: 600px) {
     @include vertical-align;
   }
   height: 600px;
@@ -53,7 +58,7 @@ body {
   background: url("/assets/iphone-background.png");
   background-size: 100% 100%;
 
-  @media (max-width: 905px){
+  @media (max-width: 905px) {
     display: none;
   }
 
@@ -64,7 +69,10 @@ body {
     top: 72px;
     left: 20px;
     background: black;
-    video {width: 100%; height: 100%;}
+    video {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
@@ -75,10 +83,10 @@ body {
   width: 415px;
   margin-left: 90px;
   .wrapper {
-    @media (min-height: 600px){
+    @media (min-height: 600px) {
       @include vertical-align;
     }
-    @media (max-height: 599px){
+    @media (max-height: 599px) {
       margin-top: 80px;
     }
     max-width: 450px;
@@ -92,15 +100,19 @@ body {
     }
   }
   h2 {
-    @media (max-width: 445px){font-size: 15px;}
-    @media (max-width: 905px){text-align: center;}
+    @media (max-width: 445px) {
+      font-size: 15px;
+    }
+    @media (max-width: 905px) {
+      text-align: center;
+    }
   }
   .promo-video {
     display: block;
     width: 100%;
     height: 203px;
     background-color: black;
-    background: url('/assets/video-thumbnail.png');
+    background: url("/assets/video-thumbnail.png");
     background-size: cover;
     border-radius: 6px;
     margin: 30px 0 30px 0;
@@ -122,7 +134,7 @@ body {
     padding: 10px;
     text-align: center;
     font-size: 18px;
-    font-family:'AvenirNextLTW01-Medium';
+    font-weight: 600;
     text-decoration: none;
     border: 2px solid #fff;
     border-radius: 6px;
@@ -134,7 +146,7 @@ body {
       transform: scale(0.95, 0.95);
     }
   }
-  @media (max-width: 905px){
+  @media (max-width: 905px) {
     width: 100%;
     margin: auto;
     text-align: center;
@@ -142,7 +154,7 @@ body {
 }
 #breakpoint {
   display: none;
-  @media (max-width: 374px){
+  @media (max-width: 374px) {
     display: inline;
   }
 }
@@ -152,14 +164,21 @@ body {
   width: 100%;
   bottom: -100px;
   padding-bottom: 20px;
-  h5,h6 {
-    font-size: 12px;
+  h5,
+  h6 {
+    font-size: 14px;
     letter-spacing: -0.8px;
     margin-top: 0;
     margin-bottom: 5px;
   }
-  h5 {font-family: AvenirNextLTW01-Regular;}
-  h6 {font-family: Avenir LT W01_85 Heavy1475544;}
-  a {text-decoration: none;}
+  h5 {
+    font-weight: 400;
+  }
+  h6 {
+    font-weight: 700;
+  }
+  a {
+    text-decoration: none;
+  }
   text-align: center;
 }
